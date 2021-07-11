@@ -1,0 +1,17 @@
+{
+  "name": "getUserMedia-webgl-texture-note",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mkusaka/getUserMedia-webgl-texture-note.git",
+  "author": "mkusaka <hinoshita1992@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "serve": "http-server .",
+    "watch": "tsc --watch",
+    "build": "tsc --build"
+  }
+}

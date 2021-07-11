@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!--webgl  and video share same CwrGpuMain , readpiexls blocking video rendering -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Video texImage2D Performance Test</title>
+    <style>
+      body {
+        background-color: #ff00ff;
+      }
+
+      video {
+        width: 100px;
+      }
+      #canvas2 {
+        width: 20%;
+
+        height: 20%;
+      }
+
+      #canvas3 {
+        width: 20%;
+
+        height: 20%;
+      }
+      #canvas {
+        background-color: #000000;
+        width: 100px;
+        height: calc(100px * 16 / 9);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="2160px" height="3840px" id="canvas"></canvas>
+    <video id="video"></video>
+    <canvas width="2160px" height="3840px" id="canvas2"></canvas>
+    <canvas width="2160px" height="3840px" id="canvas3"></canvas>
+
+    <div style="margin: 20px; font-family: courier">
+      Upload: <span id="uploadTime">0 ms, 0 uploads</span>
+
+      <br />
+      Render loop: <span id="fps">0</span> fps Main thread:
+      <br />
+      <span id="fps_main">0</span> fps
+    </div>
+
+    <div>
+      <button onclick="video.pause();">Pause</button>
+      <button onclick="video.play();">Play</button>
+      <button onclick="getUserMedia();">getUserMedia</button>
+    </div>
+
+    <script type="text/javascript" src="./index.js">
+    </script>
+  </body>
+</html>
